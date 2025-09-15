@@ -1,17 +1,15 @@
 
-Название - Фильтрация списка фильмов и сериалов по эксклюзивности
+Название - Фильтрация списка фильмов и сериалов по эксклюзивности  
+Цель - Увеличить аудиторию сервиса за счет возможности просмотра эксклюзивных категорий фильмов и сериалов  
+Требование - Иметь возможность отфильтровать весь список фильмов и сериалов, которые представлены в Otium по признаку эксклюзивности.  
 
-Цель - Увеличить аудиторию сервиса за счет возможности просмотра эксклюзивных категорий фильмов и сериалов
-
-Требование - Иметь возможность отфильтровать весь список фильмов и сериалов, которые представлены в Otium по признаку эксклюзивности.
-
-UseCase:
-
+UseCase:  
 1. В разделе «Библиотека» пользователь выбирает чек-бокс «представлены эксклюзивно в Otium».
 2. UI запрашивает список фильмов и сериалов по выбранным параметрам.
 3. API возвращает список фильмов и сериалов, которые представлены
 4. Пользователь выбирает нужный фильм из представленного списка
-Описание изменений:
+
+Описание изменений:  
 Необходимо доработать метод POST {{WebServer}}/content/list Web Server API:
 1. Добавить параметр запроса «exclusive» с типом “boolean”
 2. Добавить параметр «exclusive» с типом “boolean” в тело ответа
@@ -20,19 +18,20 @@ UseCase:
 Контекст - В ответе запроса {{FilmsServer}}/films/list и {{SeriesServer}}/series/list уже есть элемент «exclusive». 
 
 
-XML-схема GetContentListRequest.xsd
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="GetContentList">]
-    <xs:complexType>
-    <xs:sequence>
-<xs:element name="contentType" type="xs:string" />
-<xs:element name="genreValue"  type="xs:string" />
-<xs:element name="exclusive" type="xs:boolean"   />
- </xs:sequence>
-    </xs:complexType>
-</xs:element>
-</xs:schema>
+XML-схема GetContentListRequest.xsd  
+
+<?xml version="1.0" encoding="UTF-8"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+<xs:element name="GetContentList">]  
+    <xs:complexType>  
+    <xs:sequence>  
+<xs:element name="contentType" type="xs:string" />  
+<xs:element name="genreValue"  type="xs:string" />  
+<xs:element name="exclusive" type="xs:boolean"   />  
+ </xs:sequence>  
+    </xs:complexType>  
+</xs:element>  
+</xs:schema>  
 
 
 XML-схема GetContentListResponse.xsd
