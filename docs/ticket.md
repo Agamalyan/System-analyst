@@ -19,12 +19,12 @@ UseCase:
 
 
 XML-схема GetContentListRequest.xsd  
-
-'''<?xml version="1.0" encoding="UTF-8"?>  
-'''<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
-''' <xs:element name="GetContentList">]  
-'''  <xs:complexType>  
-'''   <xs:sequence>  
+<pre>
+<?xml version="1.0" encoding="UTF-8"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+ <xs:element name="GetContentList">]  
+  <xs:complexType>  
+   <xs:sequence>  
     <xs:element name="contentType" type="xs:string" />  
     <xs:element name="genreValue"  type="xs:string" />  
     <xs:element name="exclusive" type="xs:boolean"   />  
@@ -32,7 +32,7 @@ XML-схема GetContentListRequest.xsd
   </xs:complexType>  
  </xs:element>  
 </xs:schema>  
-'''
+</pre>
 
 XML-схема GetContentListResponse.xsd
 <?xml version="1.0" encoding="UTF-8"?>
