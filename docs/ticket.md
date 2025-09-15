@@ -32,7 +32,7 @@ XML-схема GetContentListRequest.xsd
   </xs:complexType>  
  </xs:element>  
 </xs:schema>  
-</pre>
+</xs:element>pre>
 
 XML-схема GetContentListResponse.xsd
 <?xml version="1.0" encoding="UTF-8"?>
