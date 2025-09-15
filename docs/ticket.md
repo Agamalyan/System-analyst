@@ -19,7 +19,7 @@ UseCase:
 
 
 XML-схема GetContentListRequest.xsd  
-
+'''
 <?xml version="1.0" encoding="UTF-8"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
  <xs:element name="GetContentList">]  
@@ -32,7 +32,7 @@ XML-схема GetContentListRequest.xsd
   </xs:complexType>  
  </xs:element>  
 </xs:schema>  
-
+'''
 
 XML-схема GetContentListResponse.xsd
 <?xml version="1.0" encoding="UTF-8"?>
